@@ -1,37 +1,28 @@
 /* styles.css */
-.word {
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+  }
+  
+  .wip {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 3rem;
-    /* Add more styles as needed */
+    font-size: 48px;
+    font-weight: bold;
+    user-select: none;
   }
   
   .link {
     position: absolute;
-    /* Add other link styles here */
   }
   
-  .link.top-left {
-    top: 10%;
-    left: 10%;
+  .link-word {
+    display: inline-block;
+    padding: 5px;
+    font-size: 16px; /* Adjust the font size as needed */
   }
   
-  .link.top-right {
-    top: 10%;
-    right: 10%;
-  }
-  
-  .link.bottom-left {
-    bottom: 10%;
-    left: 10%;
-  }
-  
-  .link.bottom-right {
-    bottom: 10%;
-    right: 10%;
-  }
-  
-  /* Add more positions as needed */
   
