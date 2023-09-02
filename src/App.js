@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import React, { useState, useEffect } from 'react';
-import Travels from './pages/travels';
+import Travels from './pages/js/Travels/travels.js';
 import './App.css';
 
 const App = () => {
@@ -106,7 +106,7 @@ const App = () => {
           <Route path="/" element={<HomePage linkPositions={linkPositions} words={words} />} />
           
           {linkPositions.map((position, index) => (
-            <Route key={index} path={`/${words[index].toLowerCase().replace(/\s/g, '-')}`} element={getWordComponent(index)} />
+            <Route key={index} path={`/${words[index].toLowerCase().replace(/\s/g, '-')}/*`} element={getWordComponent(index)} />
           ))}
           
         </Routes>
@@ -117,7 +117,7 @@ const App = () => {
 
 const HomePage = ({ linkPositions, words }) => {
   return (
-    <div>
+    <div className="home-page">
       <div className="wip">WIP</div>
       {linkPositions.map((position, index) => (
         <Link key={index} to={`/${words[index].toLowerCase().replace(/\s/g, '-')}`} className="link" style={{ top: position.top, left: position.left }}>
@@ -127,6 +127,7 @@ const HomePage = ({ linkPositions, words }) => {
     </div>
   );
 };
+
 
 
 

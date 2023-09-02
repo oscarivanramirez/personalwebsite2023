@@ -1,5 +1,6 @@
-/* styles.css */
-body {
+/* app.css */
+
+.home-page {
     margin: 0;
     display: flex;
     justify-content: center;
@@ -7,6 +8,7 @@ body {
     min-height: 100vh;
     background-color: #f0f0f0;
   }
+  
   
   .wip {
     position: absolute;
