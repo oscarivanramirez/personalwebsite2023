@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 //import Belgium from './Places/belgium';
 //import BelgiumImg1 from '../../../pictures/Belgium/belgium1.png'
 import LocationGallery from './gallery';
-import { imagesBelgium, imagesNorway } from '../../../imageImporter/imageImporter';
+import { imagesBelgium, imagesNorway, imagesFrance, imagesSpain } from '../../../imageImporter/imageImporter';
 import folderImg from '../../../icons/folder.png'
 
 
@@ -24,9 +24,9 @@ const Travels = () => {
       case 1:
         return <LocationGallery images={imagesNorway} />
       case 2:
-        return <div>France</div>
+        return <LocationGallery images={imagesFrance} />
       case 3:
-        return <div>Spain</div>
+        return <LocationGallery images={imagesSpain} />
       default:
         return <div> Have not gone there yet</div>
     }
