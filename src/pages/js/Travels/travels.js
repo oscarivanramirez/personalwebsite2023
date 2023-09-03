@@ -1,12 +1,14 @@
-import React, { useState } from 'react';
+import React from 'react';
 import '../../css/Travels/travels.css'; // Import your CSS file
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { Routes, Route, Link } from 'react-router-dom';
 //import Belgium from './Places/belgium';
 //import BelgiumImg1 from '../../../pictures/Belgium/belgium1.png'
 import LocationGallery from './gallery';
 import { imagesBelgium, imagesNorway, imagesFrance, imagesSpain } from '../../../imageImporter/imageImporter';
-import folderImg from '../../../icons/folder.png'
-
+import belgiumIcon from '../../../icons/belgium.png'
+import norwayIcon from '../../../icons/norway.png'
+import franceIcon from '../../../icons/france.png'
+import spainIcon from '../../../icons/spain.png'
 
 const Travels = () => {
   const locations = ['Belgium','Norway', 'France','Spain']
@@ -46,18 +48,24 @@ const Travels = () => {
   );
 };
 
-const TravelHome = ({ locations }) => {
+const TravelHome = () => {
+  const locationsData = [
+    { path: '/travels/Belgium', img: belgiumIcon, title: 'Belgium' },
+    { path: '/travels/Norway', img: norwayIcon, title: 'Norway' },
+    { path: '/travels/France', img: franceIcon, title: 'France' },
+    { path: '/travels/Spain', img: spainIcon, title: 'Spain' },
+  ];
+
   return (
-    <div>
-      {locations.map((location, index) => (
-        <div key={index}>
-          <Link  to={`/travels/${location}`}>
-            <img src={folderImg}/>
-          </Link>
-          <span>{location}</span>
+    <div className="location-gallery">
+      {locationsData.map((location, index) => (
+        <div key={index} className="thumbnail">
+          <Link to={location.path}><img src={location.img} alt={location.title}/></Link>
+          <span className="thumbnail-title">{location.title}</span>
         </div>
       ))}
     </div>
   );
 };
+
 export default Travels;
