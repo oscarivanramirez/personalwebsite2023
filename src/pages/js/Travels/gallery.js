@@ -40,10 +40,11 @@ const LocationGallery = ({ locationName, images }) => {
             <div className="viewer-content-image">
                 <img src={selectedImage.src} alt={selectedImage.title} />
                 <div className="viewer-title">{selectedImage.title}</div>
+                <button className='close-btn' onClick={close}>&times;</button>
             </div>
             <button className="next-btn" onClick={handleNext}>&rarr;</button>
           </div>
-          <button className='close-btn' onClick={close}>&times;</button>
+          
         </div>
       )}
     </div>

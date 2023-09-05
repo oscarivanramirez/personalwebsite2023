@@ -57,11 +57,11 @@ const TravelHome = () => {
   ];
 
   return (
-    <div className="location-gallery">
+    <div className="travel-home">
       {locationsData.map((location, index) => (
-        <div key={index} className="thumbnail">
+        <div key={index} className="location-item">
           <Link to={location.path}><img src={location.img} alt={location.title}/></Link>
-          <span className="thumbnail-title">{location.title}</span>
+          <Link className="wrap" to={location.path}><span>{location.title}</span></Link>
         </div>
       ))}
     </div>

@@ -1,19 +1,22 @@
 .location-gallery {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  padding: 20px;
+  display: grid; /* Using grid instead of flex */
+  justify-content: center; /* Center the entire grid on the page */
+  gap: 20px; 
+  width: 100%;
+  grid-template-columns: repeat(auto-fill, minmax(175px, 1fr)); 
 }
 
 .thumbnail {
-  cursor: pointer;
-  width: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
 }
 
 .thumbnail img {
-  max-width: 100%;
+  max-width: 175px;
   height: auto;
+  margin-bottom: 10px;
 }
 
 .thumbnail-title {
@@ -35,7 +38,6 @@
   flex-direction: column;
 }
 
-/* ... your previous styles ... */
 
 .viewer-content {
   display: flex;
@@ -81,16 +83,15 @@
   border: none;
   cursor: pointer;
   position: absolute; 
-  top: 50%;
-  transform: translateY(-50%); 
+
 }
 
 .prev-btn {
-  left: 0;
+  left: -10px;
 }
 
 .next-btn {
-  right: 0;
+  right: -10px;
 }
 
 
@@ -98,8 +99,8 @@
 
 .close-btn {
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: -25px;
+  right: 5px;
   font-size: 20px;
   color: white;
   background-color: transparent;
