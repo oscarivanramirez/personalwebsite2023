@@ -94,7 +94,7 @@ const App = () => {
         return <div>Need a website page</div>;
       // Add other cases for remaining words
       default:
-        return <div>You still havent figured out what you want this page to be</div>;
+        return <div>Still havent figured out this page </div>;
     }
   };
 

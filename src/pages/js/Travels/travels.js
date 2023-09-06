@@ -9,6 +9,7 @@ import belgiumIcon from '../../../icons/belgium.png'
 import norwayIcon from '../../../icons/norway.png'
 import franceIcon from '../../../icons/france.png'
 import spainIcon from '../../../icons/spain.png'
+import HamburgerIcon from '../../../components/HamburgerIcon';
 
 const Travels = () => {
   const locations = ['Belgium','Norway', 'France','Spain']
@@ -44,6 +45,7 @@ const Travels = () => {
           <Route key={index} path={`/${location}`} element={getComponent(index)} />
         ))}
       </Routes>
+      <HamburgerIcon/>
     </div>
   );
 };

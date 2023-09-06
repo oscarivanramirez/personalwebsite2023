@@ -1,0 +1,84 @@
+.hamburger {
+    display: inline-block;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+  }
+  .hamburger:hover .bar {
+    background-color: #111; /* A shade darker than the original #333 */
+  }
+  
+  .hamburger .bar {
+    background-color: #333;
+    height: 3px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    transition: all 0.4s;
+  }
+  
+  .hamburger .bar1 {
+    top: 5px;
+  }
+  
+  .hamburger .bar2 {
+    top: 13.5px; /* Middle bar */
+  }
+  
+  .hamburger .bar3 {
+    top: 22px;
+  }
+  
+  /* For the X transformation */
+  .hamburger.open .bar1 {
+    top: 13.5px;
+    transform: rotate(45deg);
+  }
+  
+  .hamburger.open .bar2 {
+    opacity: 0;
+  }
+  
+  .hamburger.open .bar3 {
+    top: 13.5px;
+    transform: rotate(-45deg);
+  }
+/* Style for the dropdown menu */
+.dropdown-menu {
+    position: fixed;
+    bottom: 50px; /* Adjust based on the height of the hamburger icon */
+    right: 20px;
+    width: 150px;
+    background-color: #333;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.3s, transform 0.3s;
+    visibility: hidden; 
+    z-index: 999;
+    color: #fff;
+  }
+  
+  .dropdown-menu a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  
+  .dropdown-menu a:last-child {
+    border-bottom: none;
+  }
+  
+  .dropdown-menu.open {
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+  }
+  
