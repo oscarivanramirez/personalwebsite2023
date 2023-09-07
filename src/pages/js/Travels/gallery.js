@@ -28,7 +28,7 @@ const LocationGallery = ({ locationName, images }) => {
   return (
     <div className="location-gallery">
       {images.map((image, index) => (
-        <div className="thumbnail" key={index} onDoubleClick={() => handleThumbnailClick(index)}>
+        <div className="thumbnail" key={index} onClick={() => handleThumbnailClick(index)}>
           <img src={image.src} alt={image.title} />
           <div className="thumbnail-title">{image.title}</div>
         </div>
