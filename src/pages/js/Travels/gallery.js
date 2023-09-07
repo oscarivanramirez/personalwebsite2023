@@ -1,9 +1,29 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import '../../css/Travels/gallery.css'; // Import your CSS file
 
 
 const LocationGallery = ({ locationName, images }) => {
   const [selectedImage, setSelectedImage] = useState(null);
+
+  //need to fix the scroll additional pixels when scroll is removed 400px width
+  useEffect(() => {
+    if (selectedImage) {
+      document.body.style.overflow = 'hidden'; 
+      document.documentElement.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'auto'; 
+      document.documentElement.style.overflow = 'auto';
+    }
+
+    return () => {
+      document.body.style.overflow = 'auto';
+      document.documentElement.style.overflow = 'auto';
+    };
+}, [selectedImage]);
+
+
+
+
   console.log('selected image in gallery',selectedImage)
   const handleThumbnailClick = (index) => {
     setSelectedImage(images[index]);

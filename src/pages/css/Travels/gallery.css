@@ -41,8 +41,8 @@
 
 .viewer-content {
   display: flex;
-  max-width: 90%;
-  max-height: 80%;
+  max-width: 850px;
+  max-height: 900px;
   align-items: center;
   justify-content: center;
   position: relative;
@@ -56,9 +56,10 @@
   text-align: center;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  /*justify-content: center;*/
   align-items: center;
   width: 100%; /* Ensures that it occupies the full width between the arrows */
+  height: 100%;
 }
 
 
@@ -82,10 +83,10 @@
   background-color: transparent;
   border: none;
   cursor: pointer;
-  position: absolute; 
+  /*position: absolute; */
 
 }
-
+/*
 .prev-btn {
   left: -10px;
 }
@@ -94,7 +95,7 @@
   right: -10px;
 }
 
-
+*/
 /* ... rest of your styles ... */
 
 .close-btn {
@@ -109,3 +110,20 @@
   z-index: 3;
 }
 /* Removed absolute positioning for arrows */
+/* Mobile-specific styles for devices with width <= 400px */
+
+@media (max-width: 400px) {
+  
+  .viewer-content {
+    max-width: 100%; /* take up 90% of screen width */
+    max-height: 100%; /* 80% of viewport height, leaving some space for browser UI */
+    padding: 0 0px;
+  }
+
+
+
+
+
+  /* ... any other mobile-specific adjustments ... */
+
+}
