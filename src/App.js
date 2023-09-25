@@ -5,7 +5,7 @@ import './App.css';
 
 const App = () => {
   const [linkPositions, setLinkPositions] = useState([]);
-  const words = ['Travels', 'Boring Work Stuff', 'Sewing !Creations', 'Need a Website?', 'Word5']; // Add more words as needed
+  const words = ['Travels', 'Work Stuff', 'Sewing !Creations', 'Need a Website?', 'Word5']; // Add more words as needed
 
 
   useEffect(() => {
@@ -87,7 +87,7 @@ const App = () => {
       case 0:
         return <Travels/>;
       case 1:
-        return <div>This is Boring Work stuff page</div>;
+        return <div>This is Work stuff page</div>;
       case 2:
         return <div>This is Sewing page</div>;
       case 3:
