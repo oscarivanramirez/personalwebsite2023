@@ -1,0 +1,129 @@
+.location-gallery {
+  display: grid; /* Using grid instead of flex */
+  justify-content: center; /* Center the entire grid on the page */
+  gap: 20px; 
+  width: 100%;
+  grid-template-columns: repeat(auto-fill, minmax(175px, 1fr)); 
+}
+
+.thumbnail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.thumbnail img {
+  max-width: 175px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.thumbnail-title {
+  margin-top: 5px;
+  font-size: 14px;
+}
+
+.viewer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  flex-direction: column;
+}
+
+
+.viewer-content {
+  display: flex;
+  max-width: 850px;
+  max-height: 900px;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 0 40px; /* Padding for the arrow buttons */
+  box-sizing: border-box; /* Ensures padding doesn't expand the container's width */
+}
+
+
+.viewer-content-image {
+  flex: 1; 
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  /*justify-content: center;*/
+  align-items: center;
+  width: 100%; /* Ensures that it occupies the full width between the arrows */
+  height: 100%;
+}
+
+
+.viewer img {
+  max-width: 100%;
+  max-height: 100%;
+  margin: 0 auto;
+  display: block;
+}
+
+.viewer-title {
+  margin-top: 10px;
+  font-size: 18px;
+  color: white;
+}
+
+.prev-btn,
+.next-btn {
+  font-size: 24px;
+  color: white;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  /*position: absolute; */
+
+}
+/*
+.prev-btn {
+  left: -10px;
+}
+
+.next-btn {
+  right: -10px;
+}
+
+*/
+/* ... rest of your styles ... */
+
+.close-btn {
+  position: absolute;
+  top: -25px;
+  right: 5px;
+  font-size: 20px;
+  color: white;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 3;
+}
+/* Removed absolute positioning for arrows */
+/* Mobile-specific styles for devices with width <= 400px */
+
+@media (max-width: 400px) {
+  
+  .viewer-content {
+    max-width: 100%; /* take up 90% of screen width */
+    max-height: 100%; /* 80% of viewport height, leaving some space for browser UI */
+    padding: 0 0px;
+  }
+
+
+
+
+
+  /* ... any other mobile-specific adjustments ... */
+
+}
