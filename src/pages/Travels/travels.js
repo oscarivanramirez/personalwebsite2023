@@ -3,10 +3,10 @@ import './travels.css'; // Import your CSS file
 import { Routes, Route, Link, useLocation} from 'react-router-dom';
 import LocationGallery from '../../components/Gallery/gallery';
 import { imagesBelgium, imagesNorway, imagesFrance, imagesSpain } from '../../components/imageImporter/imageImporter.js';
-import belgiumIcon from '../../icons/belgium.png';
-import norwayIcon from '../../icons/norway.png';
-import franceIcon from '../../icons/france.png';
-import spainIcon from '../../icons/spain.png';
+//import belgiumIcon from '../../icons/belgium.png';
+//import norwayIcon from '../../icons/norway.png';
+//import franceIcon from '../../icons/france.png';
+//import spainIcon from '../../icons/spain.png';
 import HamburgerIcon from '../../components/HamburgerIcon';
 
 const Travels = () => {
