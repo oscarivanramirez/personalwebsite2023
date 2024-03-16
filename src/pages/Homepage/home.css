@@ -1,0 +1,30 @@
+.homepage {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .wip {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 48px; /* This is your WIP font size */
+    text-align: center;
+    white-space: nowrap;
+    z-index: 10;
+  }
+  
+  .link {
+    position: absolute;
+    text-decoration: none;
+    color: #000; /* Example link color */
+    font-size: 16px; /* Adjust as needed */
+  }
+  
+  .link-word {
+    padding: 5px;
+    border: 1px solid #000; /* Example border */
+    border-radius: 5px; /* Example border radius */
+  }
+  

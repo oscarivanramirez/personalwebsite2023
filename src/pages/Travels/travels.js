@@ -3,10 +3,10 @@ import './travels.css'; // Import your CSS file
 import { Routes, Route, Link, useLocation} from 'react-router-dom';
 import LocationGallery from '../../components/Gallery/gallery';
 import { imagesBelgium, imagesNorway, imagesFrance, imagesSpain } from '../../components/imageImporter/imageImporter.js';
-//import belgiumIcon from '../../icons/belgium.png';
-//import norwayIcon from '../../icons/norway.png';
-//import franceIcon from '../../icons/france.png';
-//import spainIcon from '../../icons/spain.png';
+import belgiumIcon from '../../icons/belgium.png';
+import norwayIcon from '../../icons/norway.png';
+import franceIcon from '../../icons/france.png';
+import spainIcon from '../../icons/spain.png';
 import HamburgerIcon from '../../components/HamburgerIcon';
 
 const Travels = () => {
@@ -38,18 +38,18 @@ const Travels = () => {
           <Route key={index} path={location.toLowerCase()} element={getComponent(index)} />
         ))}
       </Routes>
-      {location.pathname === '/travels' && locations.map((location, index) => (
+      {/*{location.pathname === '/travels' && locations.map((location, index) => (
         <div key={index} className="location-item">
           <Link to={location.toLowerCase()}>{location}</Link>
         </div>
-      ))}
-      {/*<TravelHome/>*/}
+      ))}*/}
+      {location.pathname === '/travels' && <TravelHome/>}
       <HamburgerIcon/>
     </div>
   );
 };
 
-/*
+
 const TravelHome = () => {
   const locationsData = [
     { path: 'belgium', img: belgiumIcon, title: 'Belgium' },
@@ -62,12 +62,12 @@ const TravelHome = () => {
     <div className="travel-home">
       {locationsData.map((location, index) => (
         <div key={index} className="location-item">
-          <Link to={`/travels/${location.path}`}><img src={location.img} alt={location.title}/></Link>
+          <Link to={location.path}><img src={location.img} alt={location.title}/></Link>
           <Link className="wrap" to={location.path}><span>{location.title}</span></Link>
         </div>
       ))}
     </div>
   );
 };
-*/
+
 export default Travels;
