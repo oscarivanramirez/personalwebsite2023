@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './gallery.css'; // Import your CSS file
-
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 const LocationGallery = ({ locationName, images }) => {
   const [selectedImage, setSelectedImage] = useState(null);
@@ -49,7 +50,7 @@ const LocationGallery = ({ locationName, images }) => {
     <div className="location-gallery">
       {images.map((image, index) => (
         <div className="thumbnail" key={index} onClick={() => handleThumbnailClick(index)}>
-          <img src={image.src} alt={image.title} />
+          <LazyLoadImage src={image.src} alt={image.title} effect="blur" />
           <div className="thumbnail-title">{image.title}</div>
         </div>
       ))}
