@@ -1,0 +1,22 @@
+@keyframes fall {
+    0% {
+      top: -50px;
+      opacity: 0;
+    }
+    100% {
+      top: 90%; /* Adjust this value depending on where you want the ball to stop */
+      opacity: 1;
+    }
+  }
+  
+  .ball {
+    position: absolute;
+    top: -50px; /* Start off-screen */
+    left: 50%;
+    width: 50px;
+    height: 50px;
+    background-color: #3498db;
+    border-radius: 50%;
+    animation: fall 2s ease-in forwards; /* Adjust timing to your preference */
+  }
+  

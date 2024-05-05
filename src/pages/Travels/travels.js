@@ -2,7 +2,6 @@ import React from 'react';
 import './travels.css'; // Import your CSS file
 import { Routes, Route, Link, useLocation} from 'react-router-dom';
 import LocationGallery from '../../components/Gallery/gallery';
-import { imagesBelgium, imagesNorway, imagesFrance, imagesSpain } from '../../components/imageImporter/imageImporter.js';
 import belgiumIcon from '../../icons/belgium.png';
 import norwayIcon from '../../icons/norway.png';
 import franceIcon from '../../icons/france.png';
@@ -16,13 +15,13 @@ const Travels = () => {
   const getComponent = (index) => {
     switch (index) {
       case 0:
-        return <LocationGallery images={imagesBelgium} />
+        return <LocationGallery locationName={locations[0]} />
       case 1:
-        return <LocationGallery images={imagesNorway} />
+        return <LocationGallery locationName={locations[1]} />
       case 2:
-        return <LocationGallery images={imagesFrance} />
+        return <LocationGallery locationName={locations[2]} />
       case 3:
-        return <LocationGallery images={imagesSpain} />
+        return <LocationGallery locationName={locations[3]} />
       default:
         return <div> Have not gone there yet</div>
     }

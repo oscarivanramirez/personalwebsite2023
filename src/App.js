@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import React from 'react';
 import HomePage from './pages/Homepage/home.js';
 import Travels from './pages/Travels/travels.js';
+import Ball from './components/Loading/loading.js';
 
 const App = () => {
   // NOTE: This content is always rendered, no matter which route is matched. 
@@ -24,6 +25,7 @@ const App = () => {
         <Route path="/travels/*" element={<Travels/>} />
         <Route path="/sewing-pottery-woodwork" element={<div> This is my sewing, pottery, and woodwork page</div>} />
         <Route path="/threejs" element={<div> Three.js creations page </div>} />
+        <Route path="/loading" element={<Ball/>} />
       </Routes>
     </Router>
   );
